@@ -24,6 +24,7 @@ The following **additional** features are implemented:
 ### Resources
 - Code forked from [codepath/and102-lab4-starter](https://github.com/codepath/and102-lab4-starter)
 - `README.md` template was provided as part of the CodePath project course material
+- `campgrounds_app_icon.png` is my own work
 - National Park Service API: https://www.nps.gov/subjects/developer/index.htm
 
 ## License
