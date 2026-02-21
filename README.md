@@ -22,6 +22,15 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
+Here's a walkthrough of the lab:
+
+<img src='https://i.imgur.com/gWYM8bH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+(Direct link to Imgur image: https://i.imgur.com/gWYM8bH.gif )
+
+GIF created with phone's screen recorder and [EZGif](https://ezgif.com)
+
+
 ## Notes
 ### Resources
 - Code forked from [codepath/and102-lab4-starter](https://github.com/codepath/and102-lab4-starter)
