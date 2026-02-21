@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var campgroundsRecyclerView: RecyclerView
     private lateinit var binding: ActivityMainBinding
 
-    // TODO: Create campgrounds list
+    // COMPLETED: Create campgrounds list
+    private val campgrounds = mutableListOf<Campground>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,8 +40,9 @@ class MainActivity : AppCompatActivity() {
 
         campgroundsRecyclerView = findViewById(R.id.campgrounds)
 
-        // TODO: Set up CampgroundAdapter with campgrounds
-
+        // COMPLETED: Set up CampgroundAdapter with campgrounds
+        val campgroundAdapter = CampgroundAdapter(this, campgrounds)
+        campgroundsRecyclerView.adapter = campgroundAdapter
 
         campgroundsRecyclerView.layoutManager = LinearLayoutManager(this).also {
             val dividerItemDecoration = DividerItemDecoration(this, it.orientation)
@@ -61,11 +63,22 @@ class MainActivity : AppCompatActivity() {
             override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
                 Log.i(TAG, "Successfully fetched campgrounds: $json")
                 try {
-                    // TODO: Create the parsedJSON
+                    // COMPLETED: Create the parsedJSON
+                    val parsedJSON = createJson().decodeFromString(
+                        CampgroundResponse.serializer(),
+                        json.jsonObject.toString()
+                    )
 
-                    // TODO: Do something with the returned json (contains campground information)
+                    // COMPLETED: Do something with the returned json (contains campground information)
+                    parsedJSON.data?.let { list ->
+                        val start = campgrounds.size
+                        val count = list.size
+                        campgrounds.addAll(list)
 
-                    // TODO: Save the campgrounds and reload the screen
+                        // COMPLETED: Save the campgrounds and reload the screen
+                        campgroundAdapter.notifyItemRangeInserted(start, count)
+                    }
+
 
                 } catch (e: JSONException) {
                     Log.e(TAG, "Exception: $e")

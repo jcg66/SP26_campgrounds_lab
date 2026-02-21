@@ -20,7 +20,7 @@ class CampgroundAdapter(private val context: Context, private val campgrounds: L
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        // TODO: Get the individual campground and bind to holder
+        // COMPLETED: Get the individual campground and bind to holder
         val campground = campgrounds[position]
         holder.bind(campground)
     }
@@ -30,7 +30,7 @@ class CampgroundAdapter(private val context: Context, private val campgrounds: L
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
 
-        // TODO: Create member variables for any view that will be set
+        // COMPLETED: Create member variables for any view that will be set
         private val nameTextView = itemView.findViewById<TextView>(R.id.campgroundName)
         private val descriptionTextView = itemView.findViewById<TextView>(R.id.campgroundDescription)
         private val locationTextView = itemView.findViewById<TextView>(R.id.campgroundLocation)
@@ -41,16 +41,14 @@ class CampgroundAdapter(private val context: Context, private val campgrounds: L
         }
 
         fun bind(campground: Campground) {
-            // TODO: Set item views based on views and data model
-            fun bind(campground: Campground) {
-                nameTextView.text = campground.name
-                descriptionTextView.text = campground.description
-                locationTextView.text = campground.latLong
+            // COMPLETED: Set item views based on views and data model
+            nameTextView.text = campground.name
+            descriptionTextView.text = campground.description
+            locationTextView.text = campground.latLong
 
-                Glide.with(context)
-                    .load(campground.imageUrl)
-                    .into(imageView)
-            }
+            Glide.with(context)
+                .load(campground.imageUrl)
+                .into(imageView)
 
         }
 

@@ -4,13 +4,13 @@ Submitted by: **James Girgis**
 
 **Campgrounds Explorer** is a multi-screen Android app that allows users to scroll through a list of campgrounds and also view more details about them.
 
-Time spent: **1** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **Campgrounds are displayed using the RecyclerView**
+- [x] **Campgrounds are displayed using the RecyclerView**
 - [ ] **Can navigate to the Campground Details screen**
 - [ ] **Campground images are downloaded and displayed using Glide**
 
