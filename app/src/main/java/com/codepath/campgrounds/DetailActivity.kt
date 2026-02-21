@@ -37,6 +37,7 @@ class DetailActivity : AppCompatActivity() {
         // TODO: Load the image using Glide
         Glide.with(this)
             .load(campground.imageUrl)
+            .placeholder(R.drawable.campgrounds_image_placeholder)
             .into(campgroundImageIV)
     }
 }

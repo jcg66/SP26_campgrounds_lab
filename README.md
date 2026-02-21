@@ -4,7 +4,7 @@ Submitted by: **James Girgis**
 
 **Campgrounds Explorer** is a multi-screen Android app that allows users to scroll through a list of campgrounds and also view more details about them.
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
@@ -16,7 +16,9 @@ The following **required** functionality is completed:
 
 The following **additional** features are implemented:
 
-- [ ] View elements are styled in the .xml files
+- [x] View elements are styled in the .xml files
+- [x] Location coordinates are rounded and formatted properly, and fallback text is shown if no location is available
+- [x] Image placeholders/fallbacks are shown using Glide
 
 ## Video Walkthrough
 
@@ -24,7 +26,8 @@ The following **additional** features are implemented:
 ### Resources
 - Code forked from [codepath/and102-lab4-starter](https://github.com/codepath/and102-lab4-starter)
 - `README.md` template was provided as part of the CodePath project course material
-- `campgrounds_app_icon.png` is my own work
+- `campgrounds_app_icon.png` and `campgrounds_image_placeholder.png` are my own work
+- `cabin_sketch` is licensed under the the SIL Open Font License: https://fonts.google.com/specimen/Cabin+Sketch/license
 - National Park Service API: https://www.nps.gov/subjects/developer/index.htm
 
 ## License

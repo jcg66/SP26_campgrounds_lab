@@ -11,10 +11,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:contentDescription="Campground Image"
+        android:maxHeight="256dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="256dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"/>
+        tools:srcCompat="@drawable/campgrounds_image_placeholder" />
 
     <TextView
         android:id="@+id/campgroundName"
@@ -23,9 +25,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
+        android:fontFamily="@font/cabin_sketch"
         android:text="Campground Name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
-        android:textColor="#000000"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +43,7 @@
         android:layout_marginEnd="10dp"
         android:text="Location"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#000000"
-        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campgroundName" />
@@ -54,8 +56,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:text="Description"
-        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
-        android:textColor="#000000"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campgroundLocation" />

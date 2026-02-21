@@ -49,6 +49,7 @@ class CampgroundAdapter(private val context: Context, private val campgrounds: L
 
             Glide.with(context)
                 .load(campground.imageUrl)
+                .placeholder(R.drawable.campgrounds_image_placeholder)
                 .into(imageView)
 
         }

@@ -14,7 +14,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent=".35" />
+        app:layout_constraintWidth_percent=".35"
+        app:srcCompat="@drawable/campgrounds_image_placeholder" />
 
     <!-- Campground name -->
     <TextView
@@ -25,10 +26,11 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="10dp"
         android:ellipsize="end"
+        android:fontFamily="@font/cabin_sketch"
         android:maxLines="2"
         android:text="Campground Name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
-        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/campgroundImage"
         app:layout_constraintTop_toTopOf="@id/campgroundImage" />
@@ -45,7 +47,7 @@
         android:maxLines="1"
         android:text="Location"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textStyle="italic"
+        android:fontFamily="serif-monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/campgroundImage"
         app:layout_constraintTop_toBottomOf="@id/campgroundName" />
@@ -61,7 +63,7 @@
         android:ellipsize="end"
         android:maxLines="4"
         android:text="Description"
-        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/campgroundImage"
         app:layout_constraintTop_toBottomOf="@id/campgroundLocation" />
