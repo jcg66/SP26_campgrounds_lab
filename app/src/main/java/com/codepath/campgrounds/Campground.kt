@@ -20,14 +20,33 @@ data class Campground(
     val name: String?,
     @SerialName("description")
     val description: String?,
-    @SerialName("latLong")
-    val latLong: String?,
+//    @SerialName("latLong")
+//    val latLong: String?,
+    @SerialName("latitude")
+    val rawLatitude: String? = "",
+    @SerialName("longitude")
+    val rawLongitude: String? = "",
     @SerialName("images")
     val images: List<CampgroundImage>?,
 ) : java.io.Serializable {
     // Convenience property to easily get the first image URL if it exists
     val imageUrl: String
         get() = images?.firstOrNull { !it.url.isNullOrEmpty() }?.url ?: ""
+
+    val latitude: Float?
+        get() = if (rawLatitude.isNullOrBlank()) null else rawLatitude.toFloatOrNull()
+    val longitude: Float?
+        get() = if (rawLongitude.isNullOrBlank()) null else rawLongitude.toFloatOrNull()
+    val latLong: String
+        get() {
+            if (latitude == null || longitude == null) {
+                return "(no location available)"
+            } else {
+                // round to 4 decimal places for simplicity
+                // ref: https://www.reddit.com/r/LifeProTips/comments/5sf664/lpt_gps_coordinates_to_five_decimal_places_has_a/
+                return "%.4f°N %.4f°W".format(latitude,longitude)
+            }
+        }
 
 }
 
